@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Nuevo Abonado</h2>
+
+<form [formGroup]="form" (ngSubmit)="submit()" mat-dialog-content>
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>DNI</mat-label>
+    <input matInput formControlName="dni" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Tipo</mat-label>
+    <input matInput formControlName="tipo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Fecha de nacimiento</mat-label>
+    <input matInput type="date" formControlName="fechaNacimiento" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Dirección</mat-label>
+    <input matInput formControlName="direccion" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Foto URL</mat-label>
+    <input matInput formControlName="fotoUrl" />
+  </mat-form-field>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="cancelar()">Cancelar</button>
+    <button mat-flat-button color="primary" type="submit">Guardar</button>
+  </div>
+</form>
